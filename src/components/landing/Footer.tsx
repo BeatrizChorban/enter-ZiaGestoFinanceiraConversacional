@@ -1,4 +1,3 @@
-import Logo from "./Logo";
 import WaButton from "./WaButton";
 
 const FOOTER_LINKS = [
@@ -11,15 +10,23 @@ const FOOTER_LINKS = [
 
 const Footer = () => (
   <footer className="bg-brand-forest-deep text-brand-cream">
-    <div className="mx-auto max-w-6xl px-6 py-14">
+    {/* zèphira brand artwork */}
+    <div className="relative overflow-hidden">
+      <img
+        src="/brand/zephira-hero.png"
+        alt="zèphira"
+        className="h-44 w-full object-cover object-center md:h-64"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-forest-deep" />
+    </div>
+
+    <div className="mx-auto max-w-6xl px-6 pb-14 pt-12">
       <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-        <div>
-          <Logo />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-cream/50">
-            Gestão financeira simples, conversacional e em tempo real para MEIs — 100% no
-            WhatsApp.
-          </p>
-        </div>
+        <p className="max-w-xs text-sm leading-relaxed text-brand-cream/50">
+          Gestão financeira simples, conversacional e em tempo real para MEIs — 100% no
+          WhatsApp.
+        </p>
 
         <div className="grid grid-cols-2 gap-10 text-sm">
           <div>
