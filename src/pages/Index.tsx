@@ -1,23 +1,32 @@
-import { useTranslation } from "react-i18next";
+import Navbar from "@/components/landing/Navbar";
+import Hero from "@/components/landing/Hero";
+import StatsStrip from "@/components/landing/StatsStrip";
+import Problem from "@/components/landing/Problem";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Features from "@/components/landing/Features";
+import Persona from "@/components/landing/Persona";
+import Pricing from "@/components/landing/Pricing";
+import Waitlist from "@/components/landing/Waitlist";
+import Footer from "@/components/landing/Footer";
+import FloatingWhatsApp from "@/components/landing/FloatingWhatsApp";
 
-const Index = () => {
-  const { t } = useTranslation();
-
-  return (
-    <div className="relative flex h-full w-full flex-col bg-gradient-to-b from-[#4E54C8] to-[#A8C0FF] p-[32px] max-md:pb-[32px] max-md:pl-[20px] max-md:pr-[20px] max-md:pt-[32px]">
-      <div className="text-[26px] text-white max-md:text-[22px]">
-        {t("common.appName")}
-      </div>
-      <div className="flex h-full flex-1 flex-col items-center justify-center">
-        <div className="text-center text-[48px] text-white max-md:text-[26px]">
-          {t("home.hero.title")}
-        </div>
-        <div className="text-center text-[24px] text-white max-md:text-[16px]">
-          {t("home.hero.subtitle")}
-        </div>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <div className="relative min-h-full bg-background font-sans text-foreground">
+    <div className="grain" aria-hidden />
+    <Navbar />
+    <main>
+      <Hero />
+      <StatsStrip />
+      <Problem />
+      <HowItWorks />
+      <Features />
+      <Persona />
+      <Pricing />
+      <Waitlist />
+    </main>
+    <Footer />
+    <FloatingWhatsApp />
+  </div>
+);
 
 export default Index;

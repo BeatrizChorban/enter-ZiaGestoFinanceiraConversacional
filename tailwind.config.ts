@@ -53,16 +53,23 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				brand: {
+					forest: 'hsl(var(--forest))',
+					'forest-deep': 'hsl(var(--forest-deep))',
+					cream: 'hsl(var(--cream))',
+					sand: 'hsl(var(--sand))',
+					cyan: 'hsl(var(--cyan))',
+					'cyan-soft': 'hsl(var(--cyan-soft))',
+					ember: 'hsl(var(--ember))',
+					'ember-soft': 'hsl(var(--ember-soft))',
+					wa: 'hsl(var(--wa))',
+					olive: 'hsl(var(--olive))'
 				}
+			},
+			fontFamily: {
+				display: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				sans: ['"Instrument Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -71,27 +78,39 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				marquee: {
+					from: { transform: 'translateX(0)' },
+					to: { transform: 'translateX(-50%)' }
+				},
+				'typing-bounce': {
+					'0%, 60%, 100%': { transform: 'translateY(0)', opacity: '0.35' },
+					'30%': { transform: 'translateY(-4px)', opacity: '1' }
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'wa-pulse': {
+					'0%': { boxShadow: '0 0 0 0 hsl(var(--wa) / 0.45)' },
+					'100%': { boxShadow: '0 0 0 20px hsl(var(--wa) / 0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				marquee: 'marquee 30s linear infinite',
+				'typing-bounce': 'typing-bounce 1.3s ease-in-out infinite',
+				float: 'float 7s ease-in-out infinite',
+				'wa-pulse': 'wa-pulse 2.4s ease-out infinite'
 			}
 		}
 	},
-	plugins: [tailwindcssAnimate],
+	plugins: [tailwindcssAnimate]
 } satisfies Config;
