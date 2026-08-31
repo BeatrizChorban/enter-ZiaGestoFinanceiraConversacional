@@ -122,6 +122,28 @@ body,
     radial-gradient(70% 90% at 50% 110%, hsl(158 36% 16%), transparent 70%);
 }
 
+/* seven vertical satellite slices — the zèphira aerial-river look:
+   fields, ocean swirl, river delta, forest, volcanic plume, snow peaks, basin */
+.slices {
+  background: linear-gradient(
+    90deg,
+    #3b2e24 0%,
+    #6a5238 14.28%,
+    #0a1018 14.28%,
+    #155e7a 28.56%,
+    #2c3e4c 28.56%,
+    #5d7486 42.84%,
+    #16301a 42.84%,
+    #2f5a2c 57.12%,
+    #103544 57.12%,
+    #1b5469 71.4%,
+    #11161a 71.4%,
+    #aeb8bd 85.68%,
+    #3d4327 85.68%,
+    #6f6d4b 100%
+  );
+}
+
 /* chat message entrance */
 .msg-in {
   animation: msg-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
