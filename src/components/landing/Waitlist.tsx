@@ -1,9 +1,12 @@
 import { useState, type FormEvent } from "react";
-import { ArrowRight, CheckCircle2, ChevronDown, Send } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronDown, Send, Users } from "lucide-react";
 import FadeUp from "./FadeUp";
 import WaButton from "./WaButton";
 
 const BUSINESS_TYPES = ["Alimentação", "Beleza", "Artesanato", "Moda", "Outro"];
+
+const COMMUNITY_GROUP_URL =
+  "https://chat.whatsapp.com/K5KnwuAwhDX99gQrNsYz5d?s=cl&p=a&mlu=4";
 
 const CHIPS = [
   "acompanhamento próximo",
@@ -46,14 +49,15 @@ const Waitlist = () => {
                 <div className="topo absolute inset-0 opacity-40" />
                 <div className="relative">
                   <span className="inline-flex items-center gap-2 rounded-full border border-brand-jade/50 bg-brand-jade/15 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-sand">
-                    piloto · 10 vagas
+                    piloto · 2 semanas de teste
                   </span>
                   <h2 className="mt-6 font-display text-3xl font-black lowercase leading-[1.05] tracking-tight md:text-4xl">
                     seja uma das primeiras a usar a zia.
                   </h2>
                   <p className="mt-4 max-w-md leading-relaxed text-brand-cream/70">
-                    Faltam 8 vagas para a Zia atingir o ponto de equilíbrio. As 10 primeiras
-                    entram no piloto com acompanhamento próximo e ajudam a moldar o produto.
+                    São <strong className="text-brand-cream">2 semanas de teste grátis</strong>,
+                    com <strong className="text-brand-cream">vagas limitadas</strong> — só as 10
+                    primeiras entram, com acompanhamento próximo e ajudando a moldar o produto.
                   </p>
                   <div className="mt-7 flex flex-wrap gap-2">
                     {CHIPS.map((chip) => (
@@ -65,6 +69,18 @@ const Waitlist = () => {
                       </span>
                     ))}
                   </div>
+                  <a
+                    href={COMMUNITY_GROUP_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-wa px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-black/20 transition-all hover:-translate-y-0.5 hover:brightness-105"
+                  >
+                    <Users className="size-4" />
+                    entrar no grupo vip da comunidade
+                  </a>
+                  <p className="mt-3 font-mono text-[11px] uppercase tracking-widest text-brand-cream/50">
+                    vagas limitadas · grupo vip no whatsapp
+                  </p>
                 </div>
               </div>
 
