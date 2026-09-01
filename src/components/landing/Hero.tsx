@@ -96,7 +96,7 @@ const Hero = () => {
             {/* brasil polaroid (desktop accent) */}
             <div className="animate-float absolute -left-4 top-10 z-10 hidden w-32 -rotate-6 overflow-hidden rounded-xl border-[3px] border-white bg-white shadow-2xl shadow-black/40 md:block [animation-delay:3s]">
               <img
-                src="/brand/praia.jpg"
+                src="/brand/brasil-fotos.png"
                 alt="O Brasil que a Zia atende"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
