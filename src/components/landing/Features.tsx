@@ -19,7 +19,7 @@ const FEATURES = [
     icon: Calculator,
     title: "cálculo em tempo real",
     desc: "Receita, custo, margem e fluxo de caixa na hora, com os seus números de verdade.",
-    chip: "bg-brand-ember-soft text-brand-ember",
+    chip: "bg-brand-jade-soft text-brand-jade",
   },
   {
     icon: TrendingUp,
@@ -31,7 +31,7 @@ const FEATURES = [
     icon: Receipt,
     title: "leitura de notas fiscais",
     desc: "Manda a foto da nota: a Zia lê, registra e já soma no seu controle. Sem digitar nada.",
-    chip: "bg-brand-ember-soft text-brand-ember",
+    chip: "bg-brand-jade-soft text-brand-jade",
   },
   {
     icon: BellRing,
@@ -51,7 +51,7 @@ const Features = () => (
   <section id="recursos" className="bg-background py-24 md:py-32">
     <div className="mx-auto max-w-6xl px-6">
       <FadeUp>
-        <span className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-brand-ember">
+        <span className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-brand-jade">
           recursos
         </span>
         <h2 className="mt-4 max-w-2xl font-display text-4xl font-black lowercase leading-[1.02] tracking-tight md:text-5xl">
@@ -62,7 +62,7 @@ const Features = () => (
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {FEATURES.map((feature, i) => (
           <FadeUp key={feature.title} delay={(i % 3) * 0.08}>
-            <div className="group h-full rounded-3xl border border-border bg-card p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-ember/30 hover:shadow-xl hover:shadow-brand-ember/10">
+            <div className="group h-full rounded-3xl border border-border bg-card p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-jade/30 hover:shadow-xl hover:shadow-brand-jade/10">
               <div
                 className={`grid size-12 place-items-center rounded-2xl transition-transform duration-300 group-hover:scale-110 ${feature.chip}`}
               >

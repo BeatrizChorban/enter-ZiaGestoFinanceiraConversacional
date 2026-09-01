@@ -37,21 +37,21 @@ const PlanCard = ({
   <div
     className={`relative flex h-full flex-col rounded-3xl p-8 transition-transform duration-300 hover:-translate-y-1.5 ${
       highlighted
-        ? "bg-gradient-to-br from-brand-cream via-brand-cream to-brand-cyan-soft shadow-2xl shadow-brand-cyan/20 ring-2 ring-brand-ember"
+        ? "bg-gradient-to-br from-brand-cream via-brand-cream to-brand-cyan-soft shadow-2xl shadow-brand-cyan/20 ring-2 ring-brand-jade"
         : "border border-brand-cream/15 bg-brand-cream/95 shadow-xl shadow-black/20"
     }`}
   >
     {highlighted && (
-      <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand-ember px-4 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-white shadow-lg">
+      <span className="absolute -top-3.5 left-1/2 z-10 -translate-x-1/2 rounded-full bg-brand-jade px-4 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-white shadow-lg">
         mais completo
       </span>
     )}
 
-    <p className="font-mono text-xs uppercase tracking-[0.25em] text-brand-ember">
+    <p className="font-mono text-xs uppercase tracking-[0.25em] text-brand-jade">
       {name}
     </p>
     <div className="mt-4 flex items-end gap-2">
-      <span className="font-mono text-5xl font-bold tracking-tight text-brand-forest">
+      <span className="font-mono text-4xl font-bold tracking-tight text-brand-forest md:text-5xl">
         {price}
       </span>
       <span className="pb-1.5 text-xs text-brand-forest/60">{priceSuffix}</span>
@@ -61,7 +61,7 @@ const PlanCard = ({
     <ul className="mt-7 flex-1 space-y-3">
       {features.map((feature) => (
         <li key={feature} className="flex items-start gap-3 text-sm leading-relaxed text-brand-forest/80">
-          <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-ember-soft text-brand-ember">
+          <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-jade-soft text-brand-jade">
             <Check className="size-3" />
           </span>
           {feature}
@@ -78,7 +78,7 @@ const PlanCard = ({
 const Pricing = () => (
   <section id="planos" className="relative overflow-hidden bg-brand-forest py-24 text-brand-cream md:py-32">
     <div className="aerial absolute inset-0 opacity-70" />
-    <div className="absolute -bottom-40 left-1/4 size-96 rounded-full bg-brand-ember/10 blur-3xl" />
+    <div className="absolute -bottom-40 left-1/4 size-96 rounded-full bg-brand-jade/10 blur-3xl" />
 
     <div className="relative mx-auto max-w-5xl px-6">
       <FadeUp className="text-center">
@@ -94,7 +94,7 @@ const Pricing = () => (
         </p>
       </FadeUp>
 
-      <div className="mt-16 grid gap-6 pt-4 md:grid-cols-2">
+      <div className="mt-20 grid gap-6 pt-6 md:grid-cols-2">
         <FadeUp>
           <PlanCard
             name="plano básico"

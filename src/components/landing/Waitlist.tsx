@@ -32,20 +32,20 @@ const Waitlist = () => {
     `h-12 w-full rounded-xl border bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:ring-2 ${
       hasError
         ? "border-destructive ring-destructive/30"
-        : "border-input focus:border-brand-ember focus:ring-brand-ember/30"
+        : "border-input focus:border-brand-jade focus:ring-brand-jade/30"
     }`;
 
   return (
     <section id="piloto" className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <FadeUp>
-          <div className="overflow-hidden rounded-[2rem] border border-border bg-card shadow-2xl shadow-brand-ember/10">
+          <div className="overflow-hidden rounded-[2rem] border border-border bg-card shadow-2xl shadow-brand-jade/10">
             <div className="grid lg:grid-cols-2">
               {/* left */}
               <div className="relative overflow-hidden bg-brand-forest p-10 text-brand-cream md:p-12">
                 <div className="topo absolute inset-0 opacity-40" />
                 <div className="relative">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-brand-ember/50 bg-brand-ember/15 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-sand">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-brand-jade/50 bg-brand-jade/15 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-sand">
                     piloto · 10 vagas
                   </span>
                   <h2 className="mt-6 font-display text-3xl font-black lowercase leading-[1.05] tracking-tight md:text-4xl">
@@ -72,7 +72,7 @@ const Waitlist = () => {
               <div className="p-10 md:p-12">
                 {submitted ? (
                   <div className="flex h-full flex-col items-start justify-center">
-                    <span className="grid size-14 place-items-center rounded-full bg-brand-ember-soft text-brand-ember">
+                    <span className="grid size-14 place-items-center rounded-full bg-brand-jade-soft text-brand-jade">
                       <CheckCircle2 className="size-8" />
                     </span>
                     <h3 className="mt-6 font-display text-2xl font-bold lowercase tracking-tight">
@@ -155,7 +155,7 @@ const Waitlist = () => {
 
                       <button
                         type="submit"
-                        className="group flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-brand-ember px-6 text-sm font-semibold text-white shadow-lg shadow-brand-ember/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-ember/30"
+                        className="group flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-jade to-brand-cyan px-6 text-sm font-semibold text-white shadow-lg shadow-brand-jade/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-jade/30"
                       >
                         quero entrar no piloto
                         <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />

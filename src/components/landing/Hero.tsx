@@ -18,12 +18,18 @@ const Hero = () => {
       id="top"
       className="relative overflow-hidden bg-brand-forest text-brand-cream"
     >
-      {/* aerial river & forest background — the zèphira look */}
-      <div className="slices absolute inset-0" />
-      <div className="topo absolute inset-0 opacity-25 mix-blend-overlay" />
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-forest/95 via-brand-forest/40 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-forest to-transparent" />
-      <div className="absolute -left-24 top-0 size-96 rounded-full bg-[#2f5a2c]/30 blur-3xl" />
+      {/* real aerial Amazon river & forest photo */}
+      <div className="absolute inset-0">
+        <img
+          src="/brand/hero-aerial.png"
+          alt=""
+          aria-hidden
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-forest/95 via-brand-forest/55 to-brand-forest/10" />
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-brand-forest to-transparent" />
+      <div className="topo absolute inset-0 opacity-20 mix-blend-overlay" />
 
       <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-32 md:pt-40">
         <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
@@ -90,7 +96,7 @@ const Hero = () => {
             {/* brasil polaroid (desktop accent) */}
             <div className="animate-float absolute -left-4 top-10 z-10 hidden w-32 -rotate-6 overflow-hidden rounded-xl border-[3px] border-white bg-white shadow-2xl shadow-black/40 md:block [animation-delay:3s]">
               <img
-                src="/brand/brasil-mood.png"
+                src="/brand/praia.jpg"
                 alt="O Brasil que a Zia atende"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"

@@ -14,8 +14,8 @@
     --popover: 42 55% 98%;
     --popover-foreground: 156 32% 9%;
 
-    /* ember (terracotta) — primary action */
-    --primary: 15 79% 47%;
+    /* jade (deep teal-green, between forest and cyan) — primary action */
+    --primary: 168 45% 33%;
     --primary-foreground: 42 50% 98%;
 
     /* sand — secondary */
@@ -34,7 +34,7 @@
 
     --border: 42 28% 85%;
     --input: 42 28% 85%;
-    --ring: 15 79% 47%;
+    --ring: 168 45% 33%;
 
     --radius: 1rem;
 
@@ -45,8 +45,8 @@
     --sand: 31 43% 60%;
     --cyan: 183 55% 38%;
     --cyan-soft: 183 60% 90%;
-    --ember: 15 79% 47%;
-    --ember-soft: 15 80% 92%;
+    --jade: 168 45% 33%;
+    --jade-soft: 168 60% 90%;
     --wa: 142 70% 44%;
     --olive: 44 51% 22%;
   }
@@ -66,7 +66,7 @@
   }
 
   ::selection {
-    background: hsl(var(--ember) / 0.25);
+    background: hsl(var(--jade) / 0.25);
   }
 }
 
@@ -97,7 +97,7 @@ body,
     ),
     repeating-radial-gradient(
       ellipse at 70% 60%,
-      hsl(var(--ember) / 0.12) 0 1px,
+      hsl(var(--jade) / 0.12) 0 1px,
       transparent 1px 34px
     ),
     repeating-radial-gradient(
@@ -116,32 +116,10 @@ body,
     ),
     radial-gradient(
       50% 60% at 85% 20%,
-      hsl(var(--ember) / 0.16),
+      hsl(var(--jade) / 0.16),
       transparent 55%
     ),
     radial-gradient(70% 90% at 50% 110%, hsl(158 36% 16%), transparent 70%);
-}
-
-/* seven vertical satellite slices — the zèphira aerial-river look:
-   fields, ocean swirl, river delta, forest, volcanic plume, snow peaks, basin */
-.slices {
-  background: linear-gradient(
-    90deg,
-    #3b2e24 0%,
-    #6a5238 14.28%,
-    #0a1018 14.28%,
-    #155e7a 28.56%,
-    #2c3e4c 28.56%,
-    #5d7486 42.84%,
-    #16301a 42.84%,
-    #2f5a2c 57.12%,
-    #103544 57.12%,
-    #1b5469 71.4%,
-    #11161a 71.4%,
-    #aeb8bd 85.68%,
-    #3d4327 85.68%,
-    #6f6d4b 100%
-  );
 }
 
 /* chat message entrance */

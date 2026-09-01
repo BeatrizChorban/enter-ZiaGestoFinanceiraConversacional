@@ -14,7 +14,7 @@ const ChatMockup = () => {
     <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#efe7dc] shadow-2xl shadow-black/40">
       {/* header */}
       <div className="flex items-center gap-3 bg-brand-forest-deep px-4 py-3">
-        <div className="grid size-9 shrink-0 place-items-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-ember font-display text-lg font-black lowercase text-white">
+        <div className="grid size-9 shrink-0 place-items-center rounded-full bg-gradient-to-br from-brand-cyan to-brand-jade font-display text-lg font-black lowercase text-white">
           z
         </div>
         <div className="min-w-0 flex-1">
@@ -77,9 +77,9 @@ const ChatMockup = () => {
                 <span className="text-brand-forest/60">custo por unidade</span>
                 <span className="font-semibold text-brand-forest">R$ 2,20</span>
               </div>
-              <div className="flex items-center justify-between rounded-lg bg-brand-ember-soft px-3 py-1.5">
-                <span className="font-semibold text-brand-ember">margem</span>
-                <span className="font-semibold text-brand-ember">R$ 2,80 · 56%</span>
+              <div className="flex items-center justify-between rounded-lg bg-brand-jade-soft px-3 py-1.5">
+                <span className="font-semibold text-brand-jade">margem</span>
+                <span className="font-semibold text-brand-jade">R$ 2,80 · 56%</span>
               </div>
             </div>
             <p className="mt-2.5">

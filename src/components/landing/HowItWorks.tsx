@@ -23,7 +23,13 @@ const HowItWorks = () => (
     id="como-funciona"
     className="relative overflow-hidden bg-brand-forest py-24 text-brand-cream md:py-32"
   >
-    <div className="topo absolute inset-0 opacity-40" />
+    <img
+      src="/brand/floresta.jpg"
+      alt=""
+      aria-hidden
+      className="absolute inset-0 h-full w-full object-cover opacity-25"
+    />
+    <div className="topo absolute inset-0 opacity-30" />
     <div className="absolute -top-32 right-0 size-96 rounded-full bg-brand-cyan/10 blur-3xl" />
 
     <div className="relative mx-auto max-w-6xl px-6">

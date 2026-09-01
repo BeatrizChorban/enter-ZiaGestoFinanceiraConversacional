@@ -7,7 +7,7 @@ const ITEMS = [
 ];
 
 const StatsStrip = () => (
-  <div className="overflow-hidden border-y border-brand-ember/40 bg-brand-ember py-3.5 text-brand-cream">
+  <div className="overflow-hidden border-y border-brand-jade/40 bg-brand-jade py-3.5 text-brand-cream">
     <div className="animate-marquee flex w-max items-center">
       {[...ITEMS, ...ITEMS].map((item, i) => (
         <span

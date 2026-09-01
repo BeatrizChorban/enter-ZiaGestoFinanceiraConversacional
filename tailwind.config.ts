@@ -60,8 +60,8 @@ export default {
 					sand: 'hsl(var(--sand))',
 					cyan: 'hsl(var(--cyan))',
 					'cyan-soft': 'hsl(var(--cyan-soft))',
-					ember: 'hsl(var(--ember))',
-					'ember-soft': 'hsl(var(--ember-soft))',
+					jade: 'hsl(var(--jade))',
+					'jade-soft': 'hsl(var(--jade-soft))',
 					wa: 'hsl(var(--wa))',
 					olive: 'hsl(var(--olive))'
 				}
