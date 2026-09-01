@@ -5,6 +5,7 @@ import Problem from "@/components/landing/Problem";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Features from "@/components/landing/Features";
 import Persona from "@/components/landing/Persona";
+import BrasilSection from "@/components/landing/BrasilSection";
 import Founders from "@/components/landing/Founders";
 import Pricing from "@/components/landing/Pricing";
 import Waitlist from "@/components/landing/Waitlist";
@@ -22,6 +23,7 @@ const Index = () => (
       <HowItWorks />
       <Features />
       <Persona />
+      <BrasilSection />
       <Founders />
       <Pricing />
       <Waitlist />

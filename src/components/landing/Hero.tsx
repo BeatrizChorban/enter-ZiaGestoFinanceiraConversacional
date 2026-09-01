@@ -93,19 +93,6 @@ const Hero = () => {
               margem de 56% na hora
             </div>
 
-            {/* brasil polaroid (desktop accent) */}
-            <div className="animate-float absolute -left-4 top-10 z-10 hidden w-32 -rotate-6 overflow-hidden rounded-xl border-[3px] border-white bg-white shadow-2xl shadow-black/40 md:block [animation-delay:3s]">
-              <img
-                src="/brand/brasil-fotos.png"
-                alt="O Brasil que a Zia atende"
-                className="aspect-[4/3] w-full object-cover"
-                loading="lazy"
-              />
-              <p className="px-2 py-1.5 font-mono text-[8px] uppercase tracking-widest text-brand-forest/60">
-                o brasil que a zia atende
-              </p>
-            </div>
-
             <ChatMockup />
           </div>
         </div>
