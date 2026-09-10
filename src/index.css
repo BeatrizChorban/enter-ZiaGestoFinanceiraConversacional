@@ -122,6 +122,19 @@ body,
     radial-gradient(70% 90% at 50% 110%, hsl(158 36% 16%), transparent 70%);
 }
 
+/* signature gradient from the Zia mark: teal → gold → amber */
+.text-mark-gradient {
+  background-image: linear-gradient(
+    90deg,
+    #3d9e9e 0%,
+    #e5ae39 52%,
+    #d16b3d 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* chat message entrance */
 .msg-in {
   animation: msg-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;

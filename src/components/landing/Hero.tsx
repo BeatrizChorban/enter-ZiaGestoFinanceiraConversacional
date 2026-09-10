@@ -41,9 +41,7 @@ const Hero = () => {
 
             <h1 className="mt-6 font-display text-[clamp(2.75rem,6vw,4.75rem)] font-black lowercase leading-[0.95] tracking-[-0.02em]">
               entenda seus ganhos em{" "}
-              <span className="bg-gradient-to-r from-brand-cyan to-brand-sand bg-clip-text text-transparent">
-                30 segundos.
-              </span>
+              <span className="text-mark-gradient">30 segundos.</span>
             </h1>
 
             <p className="mt-6 max-w-md text-lg leading-relaxed text-brand-cream/75">
