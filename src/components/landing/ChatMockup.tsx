@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { MoreVertical, Send, Video } from "lucide-react";
+import { MoreVertical, PlayCircle, Send, Video } from "lucide-react";
 import WaButton from "./WaButton";
 
 const TimeStamp = ({ value, delay = 0 }: { value: string; delay?: number }) => (
@@ -27,12 +27,13 @@ const TypingBubble = () => (
 
 const ChatMockup = () => {
   const [input, setInput] = useState("");
-  const [userMessage, setUserMessage] = useState("");
+  const [visitorName, setVisitorName] = useState("");
   const [sent, setSent] = useState(false);
   const [typing, setTyping] = useState(false);
   const [replied, setReplied] = useState(false);
   const [scriptedTyping, setScriptedTyping] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // the scripted "typing…" only shows while the demo result is arriving
   useEffect(() => {
@@ -48,10 +49,16 @@ const ChatMockup = () => {
     });
   }, [sent, typing, replied]);
 
+  const focusDemo = () => {
+    inputRef.current?.focus();
+    inputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (sent || !input.trim()) return;
-    setUserMessage(input.trim());
+    const name = input.trim().replace(/\s+/g, " ");
+    setVisitorName(name.charAt(0).toUpperCase() + name.slice(1));
     setInput("");
     setSent(true);
     setTyping(true);
@@ -65,7 +72,7 @@ const ChatMockup = () => {
     ? "fim da demo · continue no whatsapp"
     : sent
       ? "a zia está digitando…"
-      : "demo · mande 1 mensagem e veja a zia responder";
+      : "demo · só 1 mensagem, sem cadastro";
 
   return (
     <div className="mx-auto w-full max-w-sm">
@@ -89,7 +96,7 @@ const ChatMockup = () => {
         {/* messages */}
         <div
           ref={scrollRef}
-          className="flex h-[29rem] flex-col gap-2.5 overflow-y-auto px-3 py-5"
+          className="flex h-[31rem] flex-col gap-2.5 overflow-y-auto px-3 py-5"
         >
           {/* 1 · Zia */}
           <div
@@ -97,12 +104,12 @@ const ChatMockup = () => {
             style={{ animationDelay: "250ms" }}
           >
             <div className="rounded-2xl rounded-bl-md bg-white px-3.5 py-2.5 text-[13px] leading-relaxed text-brand-forest shadow-sm">
-              Oi, Carla! Bora entender seu lucro hoje. Qual produto você quer calcular?
+              Oi! Eu sou a Zia. Bora entender o seu lucro hoje?
             </div>
             <TimeStamp value="14:02" delay={250} />
           </div>
 
-          {/* 2 · Carla */}
+          {/* 2 · exemplo */}
           <div
             className="msg-in flex max-w-[84%] items-end gap-1.5 self-end"
             style={{ animationDelay: "950ms" }}
@@ -153,19 +160,21 @@ const ChatMockup = () => {
               </div>
               <p className="mt-2.5">
                 Vendendo 100 por semana →{" "}
-                <strong className="font-mono">+R$ 280 de lucro</strong>. Precificação
-                redondinha.
+                <strong className="font-mono">+R$ 280 de lucro</strong>.
+              </p>
+              <p className="mt-2.5 border-t border-brand-forest/10 pt-2.5">
+                Agora é a sua vez: <strong>como posso te chamar?</strong>
               </p>
             </div>
             <TimeStamp value="14:03" delay={2200} />
           </div>
 
-          {/* 5 · visitor's own message */}
+          {/* 5 · visitor's name */}
           {sent && (
             <div className="msg-in flex max-w-[84%] items-end gap-1.5 self-end">
               <TimeStamp value="agora" />
               <div className="rounded-2xl rounded-br-md bg-[#d9fdd3] px-3.5 py-2.5 text-[13px] leading-relaxed text-brand-forest shadow-sm">
-                {userMessage}
+                {visitorName}
               </div>
             </div>
           )}
@@ -173,19 +182,21 @@ const ChatMockup = () => {
           {/* 6 · Zia typing on the visitor's message */}
           {typing && <TypingBubble />}
 
-          {/* 7 · Zia's live demo reply */}
+          {/* 7 · Zia's personalized reply */}
           {replied && (
             <div className="msg-in flex max-w-[92%] items-end gap-1.5 self-start">
               <div className="rounded-2xl rounded-bl-md bg-white px-3.5 py-3 text-[13px] leading-relaxed text-brand-forest shadow-sm">
-                <p>É assim que eu funciono: você conta do seu negócio e eu faço a conta na hora.</p>
-                <p className="mt-2">
-                  Se você vende a <strong>R$ 5,00</strong> e custa <strong>R$ 2,20</strong>, sua
-                  margem é <strong>R$ 2,80 (56%)</strong> — e vendendo 100 por semana são{" "}
-                  <strong className="font-mono">+R$ 280</strong>.
+                <p>
+                  Prazer, <strong>{visitorName}</strong>! Agora eu já sei como te chamar.
                 </p>
                 <p className="mt-2">
-                  A demo termina aqui, mas a Zia não para. Me chama no WhatsApp que eu calculo os
-                  números reais do seu negócio.
+                  Uma ideia do que eu faço no seu negócio: se você vende a{" "}
+                  <strong>R$ 5,00</strong> e custa <strong>R$ 2,20</strong>, sua margem é{" "}
+                  <strong>R$ 2,80 (56%)</strong> — em 30 segundos, sem planilha.
+                </p>
+                <p className="mt-2">
+                  A demo termina aqui, mas a Zia não para. Me chama no WhatsApp que eu calculo
+                  os números reais do seu negócio.
                 </p>
               </div>
               <TimeStamp value="agora" />
@@ -196,11 +207,13 @@ const ChatMockup = () => {
         {/* input */}
         <form onSubmit={handleSubmit} className="flex items-center gap-2 px-3 pb-3">
           <input
+            ref={inputRef}
+            id="zia-demo-input"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             disabled={sent}
-            placeholder={sent ? "demo encerrada — continue no whatsapp" : "Digite uma mensagem…"}
-            aria-label="Mensagem para a Zia"
+            placeholder={sent ? "demo encerrada — continue no whatsapp" : "Digite seu nome…"}
+            aria-label="Seu nome para a Zia"
             className="h-11 min-w-0 flex-1 rounded-full bg-white px-4 text-[13px] text-brand-forest shadow-sm outline-none transition-colors placeholder:text-brand-forest/35 focus:ring-2 focus:ring-brand-jade/40 disabled:opacity-60"
           />
           <button
@@ -214,20 +227,31 @@ const ChatMockup = () => {
         </form>
       </div>
 
-      <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-brand-cream/50">
-        {hint}
-      </p>
+      <div className="mt-4 flex flex-col items-center gap-2.5">
+        {!sent && (
+          <button
+            type="button"
+            onClick={focusDemo}
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-jade to-brand-cyan px-5 py-2.5 text-xs font-semibold text-white shadow-lg shadow-brand-jade/25 transition-all hover:-translate-y-0.5 hover:shadow-xl"
+          >
+            <PlayCircle className="size-4" />
+            testar a zia agora
+          </button>
+        )}
 
-      {replied && (
-        <div className="mt-3 flex justify-center">
+        {replied && (
           <WaButton
             className="px-5 py-2.5 text-xs"
-            message="Oi, Zia! Vi a demo no site e quero testar com os números do meu negócio."
+            message="Oi, Zia! Testei a demo no site e quero ver os números do meu negócio."
           >
             continuar no whatsapp
           </WaButton>
-        </div>
-      )}
+        )}
+
+        <p className="text-center font-mono text-[10px] uppercase tracking-[0.2em] text-brand-cream/50">
+          {hint}
+        </p>
+      </div>
     </div>
   );
 };
