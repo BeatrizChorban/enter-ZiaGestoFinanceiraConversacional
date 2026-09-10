@@ -18,10 +18,10 @@ const Hero = () => {
       id="top"
       className="relative overflow-hidden bg-brand-forest text-brand-cream"
     >
-      {/* real aerial Amazon river & forest photo */}
+      {/* zia-essence aerial: dunes, volcanic sea, forest — the brand's satellite imagery */}
       <div className="absolute inset-0">
         <img
-          src="/brand/hero-aerial.png"
+          src="/brand/hero-zia.png"
           alt=""
           aria-hidden
           className="h-full w-full object-cover"
