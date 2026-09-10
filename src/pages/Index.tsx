@@ -1,4 +1,5 @@
 import Navbar from "@/components/landing/Navbar";
+import AnnouncementBar from "@/components/landing/AnnouncementBar";
 import Hero from "@/components/landing/Hero";
 import StatsStrip from "@/components/landing/StatsStrip";
 import Problem from "@/components/landing/Problem";
@@ -15,6 +16,7 @@ import FloatingWhatsApp from "@/components/landing/FloatingWhatsApp";
 const Index = () => (
   <div className="relative min-h-full bg-background font-sans text-foreground">
     <div className="grain" aria-hidden />
+    <AnnouncementBar />
     <Navbar />
     <main>
       <Hero />

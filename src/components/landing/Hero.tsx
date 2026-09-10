@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-brand-forest to-transparent" />
       <div className="topo absolute inset-0 opacity-20 mix-blend-overlay" />
 
-      <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-32 md:pt-40">
+      <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-44 md:pt-52">
         <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
           {/* left */}
           <div>

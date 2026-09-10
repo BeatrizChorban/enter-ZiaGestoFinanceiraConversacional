@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-10 z-40 transition-all duration-300 ${
         scrolled
           ? "border-b border-white/5 bg-brand-forest/90 shadow-lg shadow-black/20 backdrop-blur-md"
           : "bg-transparent"
