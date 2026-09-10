@@ -62,6 +62,7 @@ export default {
 					'cyan-soft': 'hsl(var(--cyan-soft))',
 					jade: 'hsl(var(--jade))',
 					'jade-soft': 'hsl(var(--jade-soft))',
+					military: 'hsl(var(--military))',
 					wa: 'hsl(var(--wa))',
 					olive: 'hsl(var(--olive))'
 				}

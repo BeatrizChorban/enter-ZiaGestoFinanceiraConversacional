@@ -16,20 +16,9 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-brand-forest text-brand-cream"
+      className="relative overflow-hidden bg-brand-military text-brand-cream"
     >
-      {/* zia-essence aerial: dunes, volcanic sea, forest — the brand's satellite imagery */}
-      <div className="absolute inset-0">
-        <img
-          src="/brand/hero-zia.png"
-          alt=""
-          aria-hidden
-          className="h-full w-full object-cover"
-        />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-forest/95 via-brand-forest/55 to-brand-forest/10" />
-      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-brand-forest to-transparent" />
-      <div className="topo absolute inset-0 opacity-20 mix-blend-overlay" />
+      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/15 to-transparent" />
 
       <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-44 md:pt-52">
         <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
@@ -86,9 +75,6 @@ const Hero = () => {
           <div className="relative">
             <div className="animate-float absolute -top-5 right-1 z-10 rotate-2 rounded-2xl bg-brand-cream px-4 py-2.5 font-mono text-xs font-semibold text-brand-forest shadow-xl shadow-black/30">
               +2h50/semana de volta
-            </div>
-            <div className="animate-float absolute -bottom-5 left-0 z-10 -rotate-2 rounded-2xl border border-brand-cyan/30 bg-brand-forest-deep/90 px-4 py-2.5 font-mono text-xs font-semibold text-brand-cyan shadow-xl shadow-black/30 [animation-delay:1.5s]">
-              margem de 56% na hora
             </div>
 
             <ChatMockup />
